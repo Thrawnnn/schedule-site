@@ -1,1 +1,332 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #2b2929;
+        color: #e0e0e0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        header {
+        background-color: #1c1c1c;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        height: 7%;
+        top: 0;
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+        }
+
+        header nav ul li a {
+        background-color: hsl(0, 2%, 24%);
+        width: 85%;
+        height: 60%;
+        border-radius: 32px;
+        border: 2px solid #0ebac5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1em;
+        transition: all 500ms ease;
+        position: relative;
+        top: -5px;
+        }
+
+        header nav ul li a:hover {
+        box-shadow: 0 0 20px #0ebac5;
+        }
+
+        header nav ul li a img {
+        vertical-align: middle;
+        margin-bottom: 0.15rem;
+        margin-right: 0.15rem;
+        color: #fff;
+        font-size: 3em;
+        border: none;
+        }
+
+        nav ul {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        }
+
+        nav ul li {
+        margin: 0 0.25rem;
+        }
+
+        nav ul li a {
+        background: linear-gradient(to right, rgb(255, 0, 200), rgb(0, 238, 255));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-decoration: none;
+        font-weight: 600;
+        transition: box-shadow 0.3s ease, background-image 0.3s ease;
+        }
+
+        nav ul li a:hover {
+        color: #0ebac5;
+        box-shadow: 0 0 12px #0ebac5;
+        }
+
+        section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        transition: background-color 0.3s ease;
+        }
+
+        #hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .hero-content {
+        border-radius: 10px;
+        border-width: medium;
+        border-color: #15002e;
+        background-color: #15002e;
+        padding: 25px;
+        color: #15002e;
+        box-shadow: 0 0 42px #15002e;
+        }
+
+        .hero-content h1 {
+        font-size: 3rem;
+        }
+
+        .hero-content p {
+        font-size: 1.5rem;
+        }
+
+        .btn {
+        background-image: linear-gradient(to right, rgb(255, 60, 0), rgb(255, 0, 200));
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 15px;
+        margin-top: 20px;
+        display: inline-block;
+        font-weight: 600;
+        box-shadow: 8.0px 12.0px 12px hsl(0deg 0% 0% / 0.25);
+        transition: box-shadow 0.3s ease, background-image 0.3s ease;
+        }
+
+        .btn:hover {
+        background-image: linear-gradient(to right, rgb(255, 60, 0), rgb(255, 0, 200));
+        color: white;
+        text-shadow: -1px -1px 7px #6f00ff;
+        box-shadow: 12.0px 16.0px 32.0px hsl(0deg 0% 0% / 0.25);
+        }
+
+        #about {
+        background-color: #2b2929;
+        transition: background-color 0.3s ease;
+        }
+
+        .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        }
+
+        .project {
+        background-color: #15002e;
+        padding: 20px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 0 42px #15002e;
+        }
+
+        .project-video {
+        padding-top: 40px;
+        }
+
+        .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        }
+
+        .skills-list li {
+        background-color: #15002e;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #contact {
+        background-color: #2b2929;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        }
+
+        footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #1c1c1c;
+        color: white;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .myam-blamo {
+        background: linear-gradient(to right, red, blue);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        }
+
+        .name {
+        color: #c300ff;
+        overflow: hidden;
+        text-shadow: -1px -1px 7px #6f00ff;
+        border-right: .15em solid rgb(98, 0, 255);
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: .15em;
+        animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #6f00ff; }
+        }
+
+        .profile-pic {
+        position: relative;
+        top: -75px; 
+        }
+    </style>
+    <meta charset="UTF-8">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAABP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAQAAAAABEAABEAAAABEAAAARAAABEAEAAAEQABEAARAAABEBEAAAEQAAARARAAABEAARAAEQAAAQARAAABEAAAARAAAAARAAARAAAAAAEAABAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD73wAA888AAOfnAADN8wAAnPkAAD58AACfOQAAz7MAAOfnAADzzwAA+98AAP//AAD//wAA" rel="icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrawn's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap">
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <img src="icons/TH.png" alt="Profile Picture" class="profile-pic">
+  </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="name">Hello, I'm Orion.</h1>
+            <p class="myam-blamo">I'm a GMod Developer and I enjoy UI/UX Design.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I started development at the start of 2023 in Java and JavaFX. I then moved on to code for my Garry's Mod Server and found it to be quite fun to program Graphics. Once I found my Niche I started taking small jobs eventually landing a job at Project: Warfront where I am today.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>Java FX Flappy Bird</h3>
+                <p>Yep, you heard it right. During my First year in Computer Science I made a remake of a game in Java FX. This game was flappy bird and has been collecting dust for some time now in my Github</p>
+            </div>
+            <div class="project">
+                <h3>Complexity Networks Half-Life 2 Roleplay</h3>
+                <p>This was a Garry's mod server I ran in the beginning of 2023. This helped me the most in my Garry's Mod career and has taught me a lot about server-client relationships and Graphical Design.</p>
+            </div>
+            <div class="project">
+                <h3>Project: Warfront - UI/UX Developer</h3>
+                <p>I am currently a UI/UX Developer for Project: Warfront. I work as their sole specialist in the field.</p>
+            </div>
+            <div class="project">
+                <h3>BOLT: Framework</h3>
+                <p>BOLT was my first GMod Gamemode which is unfortunately still WIP and therefore Closed Source except to testers. The goal of BOLT was to be a visually appealing Gmod CVR Gamemode boilerplate for anyone interested in CvR. It is modular and very editable since it is an extension of GMod's sandbox gamemode.</p>
+            </div>
+            <div class="project">
+                <h3>GMedals</h3>
+                <p>GMedals was a big stepping stone in my Gmod development career. It was a culmination of multiple different key points that I had learned so far and included optimizing code, modular designs, and sleek and feature filled UI Design. This is available publically and is open source.</p>
+            </div>
+            <div class="project">
+                <h3>This webpage!</h3>
+                <p>This webpage is my first venture into web development and design. It is a culmination of some self-teaching I did during the summer of 2024. Overall I'm really happy with this being my first website.</p>
+            </div>
+
+            <h2>Video Demonstrations</h2>
+
+            <video class="project-video" width="320" height="240" controls>
+                <source src="videos/gmedals.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <video class="project-video" width="320" height="240" controls>
+                <source src="videos/project-warfront.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>UI/UX Designer</li>
+            <li>Gmod UI Developer</li>
+            <li>Gmod addon creator</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out via discord @ thrawn9999 or email @ lotisify@gmail.com.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Orion Rutten. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
