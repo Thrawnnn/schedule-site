@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +63,7 @@
         }
 
         nav ul li {
-        margin: 0 0.25rem;
+        margin: 0 1rem;
         }
 
         nav ul li a {
@@ -189,6 +189,21 @@
         justify-content: center;
         }
 
+        .teaser-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        }
+
+        .teaser-list img {
+            border-color: #ff0000;
+            border-style: groove;
+            box-shadow: 0 0 42px #ff0000;
+        }
+
         .change-list li {
             background-color: #ff0000;
             box-shadow: 0 0 42px #ff0000;
@@ -257,6 +272,7 @@
             <li><a href="#announcements">Announcements</a></li>
             <li><a href="#change">change log</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#teasers">teasers</a></li>
         </ul>
     </nav>
   </header>
@@ -264,7 +280,7 @@
     <section id="welcome">
         <div class="welcome-content">
             <h1 class="name">Welcome.</h1>
-            <p class="myam-blamo">This page will serve as the official Development page for Complexity Networks.</p>
+            <p class="myam-blamo">To the Development Log for CN HL2-RP.</p>
             <a href="#announcements" class="btn">View Announcements</a>
         </div>
     </section>
@@ -333,6 +349,15 @@
         </div>
     </section>
 
+    <section id="teasers">
+        <h2>Teasers/Trailers</h2>
+        <ul class="teaser-list">
+            <!-- 
+            Teasers can be put here, they can be images, text, or videos.
+            -->
+            <img src="images/c8.jpg" alt="City 8" width="700" height="600">
+        </ul>
+    </section>
 
     <section id="contact">
         <h2>Contact</h2>
@@ -341,7 +366,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Orion Rutten (Thrawn) and Complexity Networks. All rights reserved.</p>
+        <p>&copy; 2024 Orion Rutten. All rights reserved.</p>
     </footer>
 
     <script>
